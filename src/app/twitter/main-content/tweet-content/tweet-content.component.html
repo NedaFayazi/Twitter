@@ -1,0 +1,38 @@
+<div class="main-content" *ngFor="let tweet of tweets">
+  <div class="mat-card">
+    <mat-card>
+      <mat-card-content>
+        <mat-tab-group class="label">
+          <mat-tab  label="Tweets">
+            <app-tweet-header-component></app-tweet-header-component>
+            <p>
+              {{tweet.tweetsText}}
+            </p>
+          </mat-tab>
+          <mat-tab  label="Tweets & Retweets">
+            <app-tweet-header-component></app-tweet-header-component>
+            <P>{{tweet.tweetsRetweetsText}}</P>
+          </mat-tab>
+
+          <mat-tab label="Media">
+            <app-tweet-header-component></app-tweet-header-component>
+            <P>{{tweet.mediaText}}</P>
+          </mat-tab>
+
+          <mat-tab  label="Likes">
+            <app-tweet-header-component></app-tweet-header-component>
+          </mat-tab>
+          <P>
+            {{tweet.likes}}
+          </P>
+        </mat-tab-group>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button><mat-icon>message</mat-icon><span>{{tweet.messageNos}}</span></button>
+        <button [ngStyle]="{color: 'red'}"  mat-button><mat-icon>favorite</mat-icon><span>{{tweet.likeNos}}</span></button>
+        <button mat-button><mat-icon>autorenew</mat-icon><span>{{tweet.retweetNos}}</span></button>
+        <button mat-button><mat-icon>screen_share</mat-icon></button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

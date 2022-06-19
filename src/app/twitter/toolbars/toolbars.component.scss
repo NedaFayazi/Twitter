@@ -1,0 +1,63 @@
+$iconWidth: 30px;
+$primary-color: #3f51b5;
+
+
+mat-icon {
+  font-size: 30px;
+  height: $iconWidth;
+  margin-left: 50px;
+  width: $iconWidth;
+  line-height: $iconWidth;
+
+}
+
+.svg {
+  height: $iconWidth;
+  width: $iconWidth;
+  margin-left: 15px;
+}
+
+.info {
+  font-size: 15px;
+  color: $primary-color;
+}
+
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.items-header-search {
+  padding: 0 1rem;
+  margin: 1rem 0;
+
+  .form-field {
+    position: relative;
+
+    .input-search {
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      line-height: 1;
+      min-width: 20rem;
+      border-color: transparent;
+    }
+
+    .input-prefix {
+      position: absolute;
+      right: .5rem;
+      font-size: 1em;
+      color: $primary-color;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+::placeholder {
+  color: $primary-color;
+  opacity: .5;
+}

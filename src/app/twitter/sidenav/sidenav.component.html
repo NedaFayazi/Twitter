@@ -1,0 +1,32 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav class="app-sidenav mat-elevation-z20" opened mode="side">
+    <mat-toolbar><mat-icon svgIcon="twitter"></mat-icon></mat-toolbar>
+    <div class="sidenav">
+      <div>
+        <mat-list role="list" >
+          <mat-list-item class="listitem" role="listitem"><mat-icon>home</mat-icon>Home</mat-list-item>
+          <mat-list-item class="listitem" role="listitem"><mat-icon>explore</mat-icon>Explore</mat-list-item>
+          <mat-list-item class="listitem" role="listitem"><mat-icon>notifications</mat-icon>Notifications</mat-list-item>
+          <mat-list-item class="listitem message" role="listitem" data-count = 5 ><mat-icon>message</mat-icon>Messages</mat-list-item>
+          <mat-list-item class="listitem" role="listitem"><mat-icon>bookmark</mat-icon>Bookmarks</mat-list-item>
+          <mat-list-item class="listitem" role="listitem"><mat-icon>list</mat-icon>Lists</mat-list-item>
+          <mat-list-item class="listitem" role="listitem"><mat-icon>person</mat-icon>Profile</mat-list-item>
+          <mat-list-item class="listitem" role="listitem" (click)="openDialog()"><mat-icon>more_horiz</mat-icon>
+           More</mat-list-item>
+        </mat-list>
+      </div>
+      <div class="mat-button">
+        <button mat-raised-button color="primary" class="button" (click)="openSnackBar()">Tweet</button>
+      </div>
+    </div>
+
+  </mat-sidenav>
+
+  <div class="app-sidenav-content">
+    <app-toolbars></app-toolbars>
+    <div>
+      <app-main-content></app-main-content>
+    </div>
+  </div>
+</mat-sidenav-container>
+
